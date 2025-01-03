@@ -166,6 +166,7 @@ class DataArrayDirectory:
         for tt in time:
             yr = str(to_datetime(tt).year)
             mon = str(to_datetime(tt).month).zfill(2)
+            print("data: ", self.das)
             print(yr, mon, tt, variable, flush=True)
             arrs.append(self.das[yr][mon].sel(time=tt, variable=variable))
 
